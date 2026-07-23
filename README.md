@@ -60,3 +60,4 @@ When asking Claude (or anyone) to update the site, ask for **only the files
 that changed**, and confirm the same folder structure is kept — don't let it
 collapse back into a single HTML file. Then just replace the changed files in
 the repo; Cloudflare Pages auto-redeploys on push.
+
