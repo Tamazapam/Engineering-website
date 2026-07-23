@@ -217,6 +217,7 @@
   }
   .navdot.active .stub{ width:22px; background:var(--brand-red); }
   .navdot.active .num{ color:var(--fg); }
+  .navdot .num-short{ display:none; }
 
   .scroll-hint{
     position:absolute;
@@ -533,9 +534,15 @@
     .brand-logo{ height:46px; }
     .index-tag{ right:24px; top:16px; font-size:9px; }
     .coord, .depth-readout{ display:none; }
-    .navdots{ left:12px; gap:16px; }
+    .navdots{ left:18px; gap:6px; }
+    .navdot{ padding:9px 4px; }
+    .navdot .stub-track{ width:12px; flex:0 0 12px; }
+    .navdot .stub{ width:4px; }
+    .navdot.active .stub{ width:12px; }
+    .navdot .num-full{ display:none; }
+    .navdot .num-short{ display:inline; }
     .rail{ display:none; }
-    .panel{ padding:0 7vw; }
+    .panel{ padding:0 7vw 0 72px; }
     #services .grid-row{ grid-template-columns:1fr; gap:26px; }
     #contact .contact-grid{ grid-template-columns:1fr; gap:26px; }
     .proj-row{ grid-template-columns:40px 1fr; }

@@ -72,10 +72,12 @@
   var scrollHint = document.getElementById('scroll-hint');
   var navdots = document.querySelectorAll('.navdot');
 
+  var lastActiveIndex = 0;
+
   function updateSections(progress) {
     var camZ = -progress * TUNNEL_LENGTH;
-    var activeIndex = 0;
-    var bestOpacity = -1;
+    var activeIndex = lastActiveIndex;
+    var bestOpacity = 0;
 
     for (var s = 0; s < SECTIONS.length; s++) {
       var sec = SECTIONS[s];
@@ -92,6 +94,7 @@
       if (op > bestOpacity) { bestOpacity = op; activeIndex = s; }
     }
 
+    lastActiveIndex = activeIndex;
     idxCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
     navdots.forEach(function (dot, i) {
       dot.classList.toggle('active', i === activeIndex);
