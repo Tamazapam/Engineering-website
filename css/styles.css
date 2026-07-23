@@ -112,7 +112,7 @@
   }
   .brand-logo{
     display:block;
-    height:46px;
+    height:60px;
     width:auto;
   }
 
@@ -333,6 +333,9 @@
     background:var(--brand-red);
     display:inline-block;
   }
+  #hero .eyebrow{
+    transform:translateY(-14px);
+  }
 
   h1.mega{
     font-family:'Bebas Neue', sans-serif;
@@ -527,7 +530,7 @@
   @media (max-width:820px){
     .hud-frame{ inset:16px; }
     .brand{ left:24px; top:16px; }
-    .brand-logo{ height:38px; }
+    .brand-logo{ height:46px; }
     .index-tag{ right:24px; top:16px; font-size:9px; }
     .coord, .depth-readout{ display:none; }
     .navdots{ left:12px; gap:16px; }
