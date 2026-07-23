@@ -534,21 +534,33 @@
     .brand-logo{ height:46px; }
     .index-tag{ right:24px; top:16px; font-size:9px; }
     .coord, .depth-readout{ display:none; }
-    .navdots{ left:18px; gap:6px; }
-    .navdot{ padding:9px 4px; }
-    .navdot .stub-track{ width:12px; flex:0 0 12px; }
-    .navdot .stub{ width:4px; }
-    .navdot.active .stub{ width:12px; }
+    .navdots{
+      left:50%;
+      top:auto;
+      bottom:22px;
+      transform:translateX(-50%);
+      flex-direction:row;
+      gap:26px;
+    }
+    .navdot{
+      flex-direction:column;
+      gap:7px;
+      padding:10px 6px;
+    }
+    .navdot .stub-track{ width:18px; height:10px; flex:0 0 10px; }
+    .navdot .stub{ top:50%; transform:translateY(-50%); width:6px; }
+    .navdot.active .stub{ width:18px; }
     .navdot .num-full{ display:none; }
     .navdot .num-short{ display:inline; }
+    .scroll-hint{ display:none; }
     .rail{ display:none; }
-    .panel{ padding:0 7vw 0 72px; }
+    .panel{ padding:0 7vw; }
     #services .grid-row{ grid-template-columns:1fr; gap:26px; }
     #contact .contact-grid{ grid-template-columns:1fr; gap:26px; }
     .proj-row{ grid-template-columns:40px 1fr; }
     .proj-row .tag{ display:none; }
     #hero .hero-meta{ gap:32px; flex-wrap:wrap; }
-    .img-caption{ max-width:220px; bottom:56px; }
+    .img-caption{ max-width:220px; bottom:96px; }
     .img-caption .plate-title{ font-size:13px; }
   }
 

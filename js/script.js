@@ -73,28 +73,37 @@
   var navdots = document.querySelectorAll('.navdot');
 
   var lastActiveIndex = 0;
+  var SWITCH_MARGIN = 0.04;
 
   function updateSections(progress) {
     var camZ = -progress * TUNNEL_LENGTH;
-    var activeIndex = lastActiveIndex;
-    var bestOpacity = 0;
+    var ops = new Array(SECTIONS.length);
 
     for (var s = 0; s < SECTIONS.length; s++) {
       var sec = SECTIONS[s];
       var secZ = -sec.frac * TUNNEL_LENGTH;
       var range = sec.range * TUNNEL_LENGTH;
       var dist = Math.abs(camZ - secZ);
-      var op = 1 - dist / range;
-      op = clamp01(op);
+      var op = clamp01(1 - dist / range);
+      ops[s] = op;
 
       sec.el.style.opacity = op;
       sec.el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
       sec.el.style.transform = 'translateY(' + ((dist / range) * 24) + 'px)';
-
-      if (op > bestOpacity) { bestOpacity = op; activeIndex = s; }
     }
 
-    lastActiveIndex = activeIndex;
+    var candidate = 0;
+    var candidateOp = ops[0];
+    for (var c = 1; c < ops.length; c++) {
+      if (ops[c] > candidateOp) { candidateOp = ops[c]; candidate = c; }
+    }
+
+    var currentOp = ops[lastActiveIndex];
+    if (candidate !== lastActiveIndex && candidateOp > currentOp + SWITCH_MARGIN) {
+      lastActiveIndex = candidate;
+    }
+
+    var activeIndex = lastActiveIndex;
     idxCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
     navdots.forEach(function (dot, i) {
       dot.classList.toggle('active', i === activeIndex);
