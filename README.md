@@ -15,8 +15,10 @@ EngineeringWebsite/
 │   └── script.js        — scroll-progress engine (background zoom/crossfade,
 │                          section fades, HUD readouts, nav dots)
 ├── images/
-│   ├── exterior.jpg     — background plate 01 (structural envelope)
-│   ├── interior.jpg     — background plate 02 (interior fit-out)
+│   ├── image-1.jpg       — background plate 01 (structural envelope)
+│   ├── image-1-mobile.jpg — smaller variant served under 820px viewports
+│   ├── image-2.jpg       — background plate 02 (interior fit-out)
+│   ├── image-2-mobile.jpg — smaller variant served under 820px viewports
 │   ├── logo.png         — Team Projects Inc. logo (transparent PNG)
 │   └── noise.svg         — fractal-noise film-grain texture used as a CSS background
 └── README.md
@@ -27,7 +29,7 @@ EngineeringWebsite/
 - The page scroll position (0–100%) drives everything: `js/script.js` reads
   `window.scrollY` each animation frame, smooths it, and uses that single
   progress value to:
-  - crossfade + "punch zoom" between `images/exterior.jpg` and `images/interior.jpg`
+  - crossfade + "punch zoom" between `images/image-1.jpg` and `images/image-2.jpg`
   - fade the four content sections (Hero, Services, Projects, Contact) in and out
   - update the HUD (scroll %, depth readout, progress rail, active nav dot)
 - There's no video and no canvas frame sequence in this build — just the two
