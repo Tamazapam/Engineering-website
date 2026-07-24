@@ -556,7 +556,13 @@
     .navdot .num-short{ display:inline; }
     .scroll-hint{ display:none; }
     .rail{ display:none; }
-    .panel{ padding:0 7vw; }
+    .panel{
+      align-items:flex-start;
+      padding:80px 7vw 170px;
+      overflow-y:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+    .panel-inner{ margin:auto 0; }
     #services .grid-row{ grid-template-columns:1fr; gap:26px; }
     #contact .contact-grid{ grid-template-columns:1fr; gap:26px; }
     .proj-row{ grid-template-columns:40px 1fr; }
