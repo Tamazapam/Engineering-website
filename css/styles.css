@@ -47,8 +47,8 @@
     will-change:transform, opacity, filter;
     opacity:0;
   }
-  #bg-exterior{ background-image:url('../images/exterior.jpg'); }
-  #bg-interior{ background-image:url('../images/interior.jpg'); }
+  #bg-image-1{ background-image:url('../images/image-1.jpg'); }
+  #bg-image-2{ background-image:url('../images/image-2.jpg'); }
 
   .bg-overlay{
     position:fixed;
@@ -529,6 +529,8 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:820px){
+    #bg-image-1{ background-image:url('../images/image-1-mobile.jpg'); }
+    #bg-image-2{ background-image:url('../images/image-2-mobile.jpg'); }
     .hud-frame{ inset:16px; }
     .brand{ left:24px; top:16px; }
     .brand-logo{ height:46px; }

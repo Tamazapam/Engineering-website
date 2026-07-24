@@ -2,55 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team Projects Inc. — Construction &amp; Project Management</title>
+<meta name="description" content="Team Projects Inc. — specialized general contractors providing construction and project management services across BC, Canada.">
+<link rel="icon" href="images/logo.png" type="image/png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+<link rel="preload" as="image" href="images/image-1.jpg" imagesrcset="images/image-1-mobile.jpg 900w, images/image-1.jpg 1920w" imagesizes="100vw">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <div id="bg-layer">
-    <div class="bg-image" id="bg-exterior"></div>
-    <div class="bg-image" id="bg-interior"></div>
+    <div class="bg-image" id="bg-image-1"></div>
+    <div class="bg-image" id="bg-image-2"></div>
   </div>
   <div class="bg-overlay"></div>
   <div class="bg-grain"></div>
   <div class="bg-flash" id="bg-flash"></div>
 
   <div class="hud">
-    <div class="hud-frame"></div>
+    <div class="hud-frame" aria-hidden="true"></div>
 
     <div class="brand">
-      <img class="brand-logo" src="images/logo.png" alt="Team Projects Inc.">
+      <img class="brand-logo" src="images/logo.png" alt="Team Projects Inc." width="285" height="180">
     </div>
-    <div class="index-tag">FIG. <b id="idx-current">01</b> / 04</div>
+    <div class="index-tag" aria-hidden="true">FIG. <b id="idx-current">01</b> / 04</div>
 
     <div class="coord">REGISTERED OFFICE<br><b>866 WEST 22ND AVE</b> — VANCOUVER, BC</div>
-    <div class="depth-readout">SCROLL <b id="pct-readout">000%</b><br>Z-DEPTH <b id="z-readout">+0000.0</b></div>
+    <div class="depth-readout" aria-hidden="true">SCROLL <b id="pct-readout">000%</b><br>Z-DEPTH <b id="z-readout">+0000.0</b></div>
 
-    <div class="rail"><div class="rail-fill" id="rail-fill"></div></div>
+    <div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
 
-    <div class="navdots" id="navdots">
-      <button class="navdot active" data-index="0"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">01 HOME</span><span class="num-short">01</span></span></button>
-      <button class="navdot" data-index="1"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">02 SERVICES</span><span class="num-short">02</span></span></button>
-      <button class="navdot" data-index="2"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">03 PROJECTS</span><span class="num-short">03</span></span></button>
-      <button class="navdot" data-index="3"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">04 CONTACT</span><span class="num-short">04</span></span></button>
-    </div>
+    <nav class="navdots" id="navdots" aria-label="Section navigation">
+      <button class="navdot active" data-index="0" aria-label="Go to Home section"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">01 HOME</span><span class="num-short">01</span></span></button>
+      <button class="navdot" data-index="1" aria-label="Go to Services section"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">02 SERVICES</span><span class="num-short">02</span></span></button>
+      <button class="navdot" data-index="2" aria-label="Go to Projects section"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">03 PROJECTS</span><span class="num-short">03</span></span></button>
+      <button class="navdot" data-index="3" aria-label="Go to Contact section"><span class="stub-track"><span class="stub"></span></span><span class="num"><span class="num-full">04 CONTACT</span><span class="num-short">04</span></span></button>
+    </nav>
 
-    <div class="scroll-hint" id="scroll-hint">
+    <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
       Scroll to proceed
       <div class="bar"></div>
     </div>
 
-    <div class="img-caption right" id="cap-exterior">
+    <div class="img-caption right" id="cap-image-1">
       <div class="plate-tag">Plate 01 — Structural Envelope</div>
       <div class="plate-title">Cantilevered Concrete Over Site Watercourse</div>
     </div>
-    <div class="img-caption left" id="cap-interior">
+    <div class="img-caption left" id="cap-image-2">
       <div class="plate-tag">Plate 02 — Interior Fit-Out</div>
       <div class="plate-title">Concrete &amp; Timber Consultation Space</div>
     </div>
@@ -160,7 +163,6 @@
   </div>
 
   <div class="scroll-spacer"></div>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
-
